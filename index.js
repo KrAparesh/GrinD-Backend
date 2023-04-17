@@ -24,7 +24,7 @@ const server = new ApolloServer({
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log(`Successfully connected to the database`)
-        return server.listen({PORT});
+        return server.listen(PORT);
     })
     .then((res) => {
         console.log(`Server running at ${res.url}`);
